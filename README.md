@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Pizza Joint
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Structure
+
+## Dependencies
+
+- `react`: ^18.2.0
+- `react-dom`: ^18.2.0
+- `react-router-dom`: ^6.11.2
+- `framer-motion`: ^10.12.16
+- `react-scripts`: 5.0.1
+- `@testing-library/jest-dom`: ^5.16.5
+- `@testing-library/react`: ^13.4.0
+- `@testing-library/user-event`: ^13.5.0
+- `web-vitals`: ^2.1.4
 
 ## Available Scripts
 
@@ -8,63 +20,86 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build` folder.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ejects the app, giving you full control over the configuration files.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### App
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The main component that sets up the routes and manages the state of the pizza order. It is implemented in [`App.js`](src/App.js).
 
-## Learn More
+### Header
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The header component that displays the logo and title. It is implemented in [`Header.js`](src/components/Header.js).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Home
 
-### Code Splitting
+The home component that welcomes the user and provides a button to start creating a pizza. It is implemented in [`Home.js`](src/components/Home.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Base
 
-### Analyzing the Bundle Size
+The component that allows the user to choose a pizza base. It is implemented in [`Base.js`](src/components/Base.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Toppings
 
-### Making a Progressive Web App
+The component that allows the user to choose pizza toppings. It is implemented in [`Toppings.js`](src/components/Toppings.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Order
 
-### Advanced Configuration
+The component that displays the user's pizza order and shows a modal after a delay. It is implemented in [`Order.js`](src/components/Order.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Modal
 
-### Deployment
+The modal component that asks the user if they want to make another pizza. It is implemented in [`Modal.js`](src/components/Modal.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Loader
 
-### `npm run build` fails to minify
+The loader component that displays an animated loader. It is implemented in [`Loader.js`](src/components/Loader.js).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Styles
+
+The styles for the project are defined in [`App.css`](src/App.css) and [`index.css`](src/index.css).
+
+## Fonts
+
+The project uses the "Quicksand" font, which is included in the project as [`Quicksand-Light.woff`](src/Quicksand-Light.woff) and [`Quicksand-Light.woff2`](src/Quicksand-Light.woff2).
+
+## Entry Point
+
+The entry point for the project is [`index.js`](src/index.js), which sets up the React application and renders the `App` component inside a `BrowserRouter`.
+
+To install and run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/joseernestoroldan/pizza-joint.git
+    ```
+
+2. Navigate to the project directory:
+    ```sh
+    cd pizza-joint
+    ```
+
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+4. Start the development server:
+    ```sh
+    npm start
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
